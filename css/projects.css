@@ -1,0 +1,145 @@
+#dosD, #tresD{
+    text-align: center;
+    font-size: xx-large;
+    padding: 1em 0;
+    color: white;
+    background-color: var(--colorOrange);
+}
+
+/*-------------------------------------------------------------------------------- 
+  ----------------------------------- Projects -----------------------------------
+  --------------------------------------------------------------------------------*/
+
+.project{
+    display: flex;
+    justify-content: space-around;
+    margin: 5em 0;
+}
+
+.project > .project__info, .project > .gallery{
+    width: 45%;
+}
+
+.project:nth-child(odd){
+    flex-direction: row-reverse;
+}
+
+.project__info > hr{
+    margin-top: .5em;
+    margin-bottom: 2em;
+}
+
+.project__info > p{
+    margin-bottom: 2em;
+}
+
+.project__info > button{
+    color: black;
+}
+
+.project:last-child{
+    margin-bottom: 0;
+}
+
+.project + .project, .projectBlock + .projectBlock{
+    margin-top: 3em;
+}
+
+/*------------------------------------ Slides ------------------------------------*/
+
+.gallery{
+    position: relative;
+}
+
+/* Hide the images by default */
+.slide {
+    position: relative;
+    padding-top: 56.25%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.slide > img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: black;
+}
+
+/*------------------------------------ Arrows ------------------------------------*/
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-62.5%);
+    width: auto;
+    padding: 16px;
+    /*margin-top: -50px;*/
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 2;
+}
+
+/* Position the "next button" to the right */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*----------------------------------- Captions -----------------------------------*/
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Six columns side by side */
+.column {
+    position: relative;
+    float: left;
+    width: 25%;
+    padding-top: calc(56.25% / 4);
+    height: 0;
+    cursor: pointer;
+}
+
+.column > img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+}
+  
+/* Add a transparency effect for thumnbail images */
+.demo {
+    width: 100%;
+    opacity: 0.6;
+}
+  
+.active,
+.demo:hover {
+    opacity: 1;
+}

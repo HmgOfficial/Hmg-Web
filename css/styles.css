@@ -1,0 +1,148 @@
+:root{
+  --colorAntracite: rgb(40, 40, 45);
+  --colorOrange: #f65130;
+  --colorYellow: #e9941a;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+  scroll-behavior: smooth;
+}
+
+/*-------------------------------------------------------------------------------- 
+  ---------------------------------- Head Lines ----------------------------------
+  --------------------------------------------------------------------------------*/
+
+h1{
+    padding: 1em 0;
+    color: var(--colorOrange);
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+h2,h3,h4,h5,h6{
+  font-family: 'Roboto Slab', serif;
+}
+
+/*-------------------------------------------------------------------------------- 
+  ------------------------------------- MENU -------------------------------------
+  --------------------------------------------------------------------------------*/
+
+nav{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background-image: linear-gradient(to bottom, var(--colorOrange), var(--colorYellow) 60%, transparent);
+  z-index: 10;
+}
+
+.menuList{
+  list-style-type: none;
+  justify-content: center;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.menuList a{
+  padding: 1em 1.5em 2.5em;
+  display: block;
+  height: 100%;
+  font-family: 'Roboto Slab', serif;
+  color: rgb(40, 40, 45);
+  text-decoration: none;
+  
+}
+
+.menuList a:Hover, #menuSelected{
+  background-image: linear-gradient(to bottom, #28282d 60%, transparent);
+  font-family: 'Roboto Slab', serif;
+  color: rgb(230, 230, 230);
+}
+
+.menuList > li{
+  display: block;
+  width: auto;
+  height: 100%;
+  font-size: x-large;
+}
+
+.menuList > li > figure{
+  padding-top: 0.5em;
+  padding-right: 4em;
+}
+
+.menuList > li > figure > img{
+  
+  width: auto;
+  height: 2.5em;
+}
+
+/*-------------------------------------------------------------------------------- 
+  ------------------------------------- BODY -------------------------------------
+  --------------------------------------------------------------------------------*/
+
+body{
+    /* Imagen fondo */
+    background-image: url("../media/img/bg.jpg");
+    background-size: 2.5%;
+    background-repeat: repeat;
+}
+
+.container{
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    background-color: var(--colorAntracite);
+    padding-bottom: 2.5em;
+} 
+
+/*-------------------------------------------------------------------------------- 
+  ------------------------------------ FOOTER ------------------------------------
+  --------------------------------------------------------------------------------*/
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 1em 0;
+  width: 100%;
+  background-color: var(--colorYellow);
+}
+
+footer > p:first-child{
+  margin-right: 2em;
+}
+
+footer > p {
+  color: var(--colorAntracite);
+}
+
+
+/* SCROLL SMOOTH */
+/* scroll-behaviour: smooth;
+
+/* Transform */
+.transforms{
+  -ms-transform: translate(3em,1em); /* Explorer */
+  -webkit-transform: translate(3em,1em); /* Safari */
+  transform: translate(3em,1em); /* el resto de navegadores */
+  
+  transform: rotate(-10deg);
+  transform: scale(1.5,1.5);
+  transform: skew(10deg, 10deg);
+}
+/* Transitions */
+.transitions{ 
+  /* IE9 o inferior no es compatible */ 
+  -webkit-transition: 0; /* Safari */
+  transition: 0; /* Para el resto */
+
+  transition-property: width, background-color, color;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+}

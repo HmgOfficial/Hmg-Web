@@ -1,0 +1,145 @@
+/*-------------------------------------------------------------------------------- 
+  -------------------------------------- CV --------------------------------------
+  --------------------------------------------------------------------------------*/
+
+.cv{
+    display: flex;
+    justify-content: center;
+}
+
+/*----------------------------Sidebar----------------------------*/
+
+.sidebar {
+    width: 100%;
+    max-width: 250px;
+    margin-right: 20px;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(40,40,45,.7) ,var(--antracite)30%);
+    border-radius: 23px;
+    border: solid 2px var(--colorYellow);
+    border-radius: 25px;
+}
+
+.sidebar > h2, .sidebar > p{
+    padding: 0 10%;
+}
+
+.sidebar > p{
+    color: white;
+    margin: 5px 0;
+}
+
+.sidebar > hr{
+    margin: 5px auto;
+    width: 80%;
+}
+
+.sidebar > h2{
+    color: var(--colorOrange);
+    text-align: left;
+    margin: 10px 0;
+}
+
+.name{
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgba(40, 40, 45, 0) ,  rgba(40,40,45,.7) 50%, var(--colorAntracite));
+    font-size: 27px;
+    color: var(--colorOrange);
+}
+
+#fotoCV{
+    width: 100%; 
+    height: auto; 
+    display: block;
+    border-radius: 23px 23px 0px 0px;
+}
+
+#image{
+    width: 100%;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+/*----------------------------Experience Content----------------------------*/
+
+.experienceContent {
+    max-width: 700px;
+    background-color: rgb(230, 230, 230);
+    border: solid 3px var(--colorYellow);
+    border-radius: 25px;
+    padding-bottom: 1em;
+}
+
+.experienceContent + .experienceContent{
+    margin-top: 1em;
+}
+
+.experienceContent > h2{
+    text-align: left;
+    color: white;
+    font-size: 25px;
+    border-radius: 20px 20px 0px 0px;
+    background-image: linear-gradient(to right, var(--colorOrange), var(--colorYellow));
+    padding: 1em;
+}
+
+.experienceContent > h3{
+    font-size: 20px;
+}
+
+.experienceContent > h3, .experienceContent > h4, .experienceContent > p{
+    color: var(--colorAntracite);
+    margin: 5px 1.5% 0 0;
+    font-size: 15px;
+    padding-left: 1em;
+}
+
+.experienceContent > p > strong{
+    color: var(--colorOrange);
+}
+
+.experienceContent > hr{
+    width: 95%;
+    color: var(--colorAntracite);
+    display: block;
+    margin: 5px auto;
+
+}
+
+/*-------------------------------------------------------------------------------- 
+  ------------------------------------- Form -------------------------------------
+  --------------------------------------------------------------------------------*/
+
+.contact{
+    margin-top: 3em;
+    margin: auto;
+    width: 50%;
+    max-width: 500px;
+}
+
+.contact > form{
+    border: solid 2px var(--colorYellow);
+    border-radius: 25px;
+    padding: 3em 2em;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact > form > label{
+    color: var(--colorOrange);
+}
+
+.contact > form > input{
+    color: black;
+}
+
+.contact input, .contact textarea{
+    width: 100%;
+}
+
+.contact button{
+    color: black;
+}

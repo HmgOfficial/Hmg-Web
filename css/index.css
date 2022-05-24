@@ -1,0 +1,151 @@
+h1{
+    padding-top: 0.25em;
+    padding-bottom: 0.5em;
+    font-size: 4em;
+}
+
+h2{
+    padding: 1em 0;
+    color: var(--colorOrange);
+    text-align: center;
+    font-size: 2em;
+}
+
+/*-------------------------------------------------------------------------------- 
+  --------------------------------- Slide Images ---------------------------------
+  --------------------------------------------------------------------------------*/
+
+.gallery{
+    position: relative;
+}
+
+/* Hide the images by default */
+.slide {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 2em 0 0 2em;
+}
+
+.slide iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    border: none;
+}
+
+.slide:hover{
+    border-radius: 2em;
+}
+
+.slide:hover > .borderGradient{
+    transform: translateX(0);
+} 
+
+.slide > .borderGradient{
+    background-image: linear-gradient(to left, rgba(246, 81, 48,1), rgba(233, 148, 26, 1)80%, transparent 95%);
+    height: 100%;
+    width: 33%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    padding: 3px;
+    border-radius: 0 2em 2em 0;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform 200ms;
+}
+
+.borderGradient > aside{
+    border-radius: 0 2em 2em 0;
+    height: 100%;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 10%;
+    background-image: linear-gradient(to left, black 90%, transparent);
+}
+
+.slideInfo{
+    text-decoration: none;
+    padding: 0 10%;
+}
+
+.slideInfo > h1{
+    color: var(--colorOrange);
+    padding-top: 10%;
+}
+
+.slideInfo > hr{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    /*margin-top: -50px;*/
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index: 2;
+}
+
+/* Position the "next button" to the right */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------------------------------------------------------------------- 
+  ----------------------------------- About Me -----------------------------------
+  --------------------------------------------------------------------------------*/
+
+.aboutMe{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    width: 100%;
+}
+
+.aboutMe > p{
+    width: 50%;
+    max-width: 600px;
+}
+
+.aboutMe > p > a {
+    color: var(--colorOrange);
+}
+
+.aboutMe > figure{
+    width: 40%;
+    max-width: 400px;
+}
+
+.aboutMe > figure > img{
+    width: 100%;
+}
